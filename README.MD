@@ -2,14 +2,14 @@
 # My Java Spring Web
 <h1 align="center">
   <br>
-  Laptop Shop
+  Laptop Shop Ecommerce
   <br>
 </h1>
 
 <h4 align="center">A minimal Laptop Shop website built on top of simple, lightweight web tech.</h4>
 
 <p align="center">
-  <img src="Demo\homepage.gif" alt="Demo GIF" width="800" />
+  <img src="Demo\laptop-shop-ecommerce.gif" alt="Demo GIF" width="800" />
 </p>
 
 <p align="center">
