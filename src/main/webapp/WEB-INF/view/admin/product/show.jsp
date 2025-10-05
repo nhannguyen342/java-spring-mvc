@@ -39,48 +39,51 @@
                                                 </div>
 
                                                 <hr />
-                                                <c:if test="${empty orders}">
-                                                    <table class="table table-bordered table-hover">
-                                                        <thead>
+
+                                                <table class="table table-bordered table-hover">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>ID</th>
+                                                            <th>Name</th>
+                                                            <th>Price</th>
+                                                            <th>Factory</th>
+                                                            <th>Action</th>
+
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <c:forEach var="product" items="${products}">
                                                             <tr>
-                                                                <th>ID</th>
-                                                                <th>Name</th>
-                                                                <th>Price</th>
-                                                                <th>Factory</th>
-                                                                <th>Action</th>
-
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <c:forEach var="product" items="${products}">
-                                                                <tr>
-                                                                    <th>${product.id}</th>
-                                                                    <td>${product.name}</td>
-                                                                    <td>
-                                                                        <fmt:formatNumber type="number"
-                                                                            value="${product.price}" /> đ
-                                                                    </td>
-                                                                    <td>${product.factory}</td>
-                                                                    <td>
-                                                                        <a href="/admin/product/${product.id}"
-                                                                            class="btn btn-success">View</a>
-                                                                        <a href="/admin/product/update/${product.id}"
-                                                                            class="btn btn-warning mx-2">Update</a>
-                                                                        <a href="/admin/product/delete/${product.id}"
-                                                                            class="btn btn-danger">Delete</a>
-                                                                    </td>
-                                                            </c:forEach>
-
-
+                                                                <th>${product.id}</th>
+                                                                <td>${product.name}</td>
+                                                                <td>
+                                                                    <fmt:formatNumber type="number"
+                                                                        value="${product.price}" /> đ
+                                                                </td>
+                                                                <td>${product.factory}</td>
+                                                                <td>
+                                                                    <a href="/admin/product/${product.id}"
+                                                                        class="btn btn-success">View</a>
+                                                                    <a href="/admin/product/update/${product.id}"
+                                                                        class="btn btn-warning mx-2">Update</a>
+                                                                    <a href="/admin/product/delete/${product.id}"
+                                                                        class="btn btn-danger">Delete</a>
+                                                                </td>
+                                                        </c:forEach>
+                                                        <c:if test="${empty products}">
+                                                            <tr>
+                                                                <td colspan="6" style="text-align: center;">
+                                                                    Không có product
+                                                                </td>
                                                             </tr>
 
-                                                        </tbody>
-                                                    </table>
-                                                </c:if>
+                                                        </c:if>
+
+                                                    </tbody>
+                                                </table>
 
 
-
-                                                <c:if test="${ not empty orders}">
+                                                <c:if test="${ not empty products}">
                                                     <nav aria-label="Page navigation example">
                                                         <ul class="pagination justify-content-center">
                                                             <!-- Nút Previous -->

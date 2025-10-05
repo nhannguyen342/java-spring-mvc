@@ -114,9 +114,7 @@
                                                         </ul>
                                                     </nav>
                                                 </c:if>
-                                                <c:if test="${ not empty orders}">
 
-                                                </c:if>
                                             </div>
                                         </div>
                                     </div>

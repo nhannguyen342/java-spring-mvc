@@ -1,4 +1,5 @@
 
+# My Java Spring Web
 <h1 align="center">
   <br>
   Laptop Shop
@@ -7,6 +8,9 @@
 
 <h4 align="center">A minimal Laptop Shop website built on top of simple, lightweight web tech.</h4>
 
+<p align="center">
+  <img src="Demo\homepage.gif" alt="Demo GIF" width="800" />
+</p>
 
 <p align="center">
   <a href="#key-features">Key Features</a> •
@@ -21,73 +25,50 @@
 
 ## Key Features
 
-* LivePreview - Make changes, See changes
-  - Instantly see what your Markdown documents look like in HTML as you create them.
-* Sync Scrolling
-  - While you type, LivePreview will automatically scroll to the current location you're editing.
-* GitHub Flavored Markdown  
-* Syntax highlighting
-* Dark/Light mode
-* Toolbar for basic Markdown formatting
-* Supports multiple cursors
-* Save the Markdown preview as PDF
-* Emoji support in preview :tada:
-* App will keep alive in tray for quick usage
-* Full screen mode
-  - Write distraction free.
-* Cross platform
-  - Windows, macOS and Linux ready.
+
+* User authentication and registration
+* Product catalog management (CRUD)
+* Shopping cart functionality (add, update, remove items)
+* Order processing and history
+* Admin dashboard for managing users, products, and orders
+* Role-based access control (admin, user)
+* File upload support (e.g., product images)
+* Strong password validation and registration checks
+* RESTful API for cart operations
+* Responsive web UI (JSP, CSS, JS)
+* Built with Spring Boot, Hibernate, Jakarta EE
+* Docker support for easy deployment
 
 ## How To Use
 
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/amitmerchant1990/electron-markdownify
+$ git clone https://github.com/nhannguyen342/java-spring-mvc.git
 
 # Go into the repository
-$ cd electron-markdownify
+$ cd laptop-shop
 
 # Install dependencies
-$ npm install
+$ mvn install
 
 # Run the app
-$ npm start
+$ mvn spring-boot:run
 ```
-
-> **Note**
-> 
-
-
-## Download
-
-
-
-## Emailware
-
-
-
-## Credits
-
-This software uses the following open source packages:
 
 
 
 ## Related
 
 
-## Support
-
-If you like this project and think it has helped in any way, consider buying me a coffee!
-
-
-
-## You may also like...
-
+* [Spring Boot Documentation](https://spring.io/projects/spring-boot)
+* [Hibernate Documentation](https://hibernate.org/)
 
 
 ## License
 
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 
 ---

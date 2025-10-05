@@ -42,7 +42,7 @@ public class UserController {
         return "Hello";
     }
 
-    @RequestMapping("/admin/user")
+    @GetMapping("/admin/user")
     public String getUserPage(Model model, @RequestParam("page") Optional<String> pageOptional) {
         int page = 1;
         try {

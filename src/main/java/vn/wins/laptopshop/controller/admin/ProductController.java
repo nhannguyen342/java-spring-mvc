@@ -46,7 +46,7 @@ public class ProductController {
             // page = 1
 
         }
-        Pageable pageable = PageRequest.of(page - 1, 5); // mỗi trang 2 sản phẩm
+        Pageable pageable = PageRequest.of(page - 1, 5); // mỗi trang sản phẩm
         Page<Product> prs = this.productService.fetchProducts(pageable);
         List<Product> listProducts = prs.getContent();
         model.addAttribute("products", listProducts);

@@ -37,44 +37,49 @@
                                             </div>
 
                                             <hr />
-                                            <c:if test="${empty users}">
-                                                <table class="table table-bordered table-hover">
-                                                    <thead>
+
+                                            <table class="table table-bordered table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th>ID</th>
+                                                        <th>Email</th>
+                                                        <th>Full Name</th>
+                                                        <th>Role</th>
+                                                        <th>Action</th>
+
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <c:forEach var="user" items="${users}">
                                                         <tr>
-                                                            <th>ID</th>
-                                                            <th>Email</th>
-                                                            <th>Full Name</th>
-                                                            <th>Role</th>
-                                                            <th>Action</th>
+                                                            <th>${user.id}</th>
+                                                            <td>${user.email}</td>
+                                                            <td>${user.fullName}</td>
+                                                            <td>${user.role.name}</td>
+                                                            <td>
+                                                                <a href="/admin/user/${user.id}"
+                                                                    class="btn btn-success">View</a>
+                                                                <a href="/admin/user/update/${user.id}"
+                                                                    class="btn btn-warning mx-2">Update</a>
+                                                                <a href="/admin/user/delete/${user.id}"
+                                                                    class="btn btn-danger">Delete</a>
+                                                            </td>
+                                                    </c:forEach>
+                                                    </tr>
 
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <c:forEach var="user" items="${users}">
-                                                            <tr>
-                                                                <th>${user.id}</th>
-                                                                <td>${user.email}</td>
-                                                                <td>${user.fullName}</td>
-                                                                <td>${user.role.name}</td>
-                                                                <td>
-                                                                    <a href="/admin/user/${user.id}"
-                                                                        class="btn btn-success">View</a>
-                                                                    <a href="/admin/user/update/${user.id}"
-                                                                        class="btn btn-warning mx-2">Update</a>
-                                                                    <a href="/admin/user/delete/${user.id}"
-                                                                        class="btn btn-danger">Delete</a>
-                                                                </td>
-                                                        </c:forEach>
-
-
-                                                        </tr>
-
-                                                    </tbody>
-                                                </table>
-                                            </c:if>
+                                                </tbody>
+                                                <c:if test="${empty users}">
+                                                    <tr>
+                                                        <td colspan="6" style="text-align: center;">
+                                                            Không có user
+                                                        </td>
+                                                    </tr>
+                                                </c:if>
+                                            </table>
 
 
-                                            <c:if test="${ not empty users}">
+
+                                            <c:if test="${not empty users}">
                                                 <nav aria-label="Page navigation example">
                                                     <ul class="pagination justify-content-center">
                                                         <!-- Nút Previous -->

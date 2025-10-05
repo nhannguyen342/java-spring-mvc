@@ -40,7 +40,6 @@ public class OrderController {
             // page = 1
 
         }
-
         Pageable pageable = PageRequest.of(page - 1, 2); // mỗi trang 2 sản phẩm
         Page<Order> ors = this.orderService.fetchAllOrders(pageable);
         List<Order> listOrders = ors.getContent();
